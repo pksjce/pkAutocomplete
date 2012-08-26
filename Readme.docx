@@ -1,0 +1,37 @@
+﻿Jquery Plugin for pkautocomplete.
+
+1. How to use pkautocomplete in your jquery page?
+	You can use pkautocomplete like any jquery widget.
+	Create two empty divs on for every autocomplete field you would like to see.
+
+<div id = "autocomplete"></div>
+<div id="dataDiv"></div>
+
+	You can use “autocomplete” to fill in the actual component.
+	“dataDiv” is used to publicly store a comma separated value list of the autocomplete.
+
+Instantiate pkautocomplete as follows.
+
+$('#autocomplete').pkautocomplete(
+	{	
+		criteriaName: "pavi",
+		url:"http://herokory.herokuapp.com/autocomplete/jsonpCallback/",
+		dataDiv:"dataDiv"
+	});			
+});
+
+The ui widget takes three options.
+criteriaName – uniquename for the autocomplete instance.
+url – The ajax url to which one can append the autocomplete candidate.
+dataDiv – Here you can find 'value' attribute which contains a comma separated list of the selected chiclet values.
+
+
+2. Usability factors of pkautocomplete
+
+Type in your candidate data in the input box.
+If the ajax call completes, you will find a list of data under the input box.
+You can use arrow keys or mouse point to select your value.
+You can click/press enter/press tab to finalise your previous selection.
+A small chiclet appears under the input box with the value selected.
+Each chiclet will have a close button , on clicking which the chiclet value is removed from the ui and list.
+The dataDiv will have the comma separated list of values selected and showing as chiclets. $(dataDiv).attr('value') will give the value.

@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet" href="css/pkautocomplete.css" />
+	<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>	
+	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.pkautocomplete.js"></script>
+
+</head>
+<body>
+<div id = "autocomplete"></div>
+<div id="dataDiv"></div>
+
+	<script type="text/javascript">
+	$(function(){
+	
+			var my = $('#autocomplete').pkautocomplete(
+							{	
+								criteriaName: "pavi",
+								url:"http://herokory.herokuapp.com/autocomplete/jsonpCallback/",
+								dataDiv:"dataDiv"
+							});
+							
+		});
+	</script>
+
+</body>
+
+</html>
